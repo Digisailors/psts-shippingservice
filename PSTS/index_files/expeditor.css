@@ -2168,7 +2168,7 @@ ul.ewf-checklist li:first-child {
 	*/
 .sf-menu .dropdown .dropdown > a:after {
   content: "\e649";
-  font-family: 'themify';
+  font-family: 'fontawesome';
   padding-left: 5px;
   float: right;
   font-size: 15px;
