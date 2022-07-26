@@ -1946,175 +1946,175 @@ ul.ewf-checklist li:first-child {
 #header nav {
   text-align: right;
 }
-
 /* ==========================================================================
    =Menu 
    ========================================================================== */
 /* =Menu Basics
    ========================================================================== */
-.sf-menu {
-  display: none;
-}
-
-@media (min-width: 1200px) {
-  .sf-menu {
+   .sf-menu {
+    display: none;
+  }
+  
+  @media (min-width: 1200px) {
+    .sf-menu {
+      display: inline-block;
+      margin-right: 50px;
+    }
+  }
+  
+  /*
+     * 1. Clearfix hack 
+     */
+  .sf-menu:after {
+    /* 1 */
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  
+  .sf-menu,
+  .sf-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+  }
+  
+  .sf-menu > li {
     display: inline-block;
-    margin-right: 50px;
   }
-}
-
-/*
-	 * 1. Clearfix hack 
-	 */
-.sf-menu:after {
-  /* 1 */
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-
-.sf-menu,
-.sf-menu ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-align: left;
-}
-
-.sf-menu > li {
-  display: inline-block;
-}
-
-.sf-menu > li > a {
-  position: relative;
-  display: block;
-}
-
-.sf-menu .sf-mega,
-.sf-menu li.dropdown ul {
-  position: absolute;
-  z-index: 1025;
-  /* 1 */
-  top: 100%;
-  left: 0;
-  display: none;
-}
-
-.sf-menu li.dropdown {
-  position: relative;
-}
-
-.sf-menu li.dropdown ul ul {
-  top: 0;
-  left: 100%;
-}
-
-.sf-menu li:hover > .sf-mega,
-.sf-menu li.sfHover > .sf-mega,
-.sf-menu li.dropdown:hover > ul,
-.sf-menu li.dropdown.sfHover > ul {
-  display: block;
-}
-
-/* =Menu Skin
-   ========================================================================== */
-.sf-menu a {
-  display: block;
-  color: #ffffff;
-  position: relative;
-}
-
-.sf-menu a:hover {
-  color: #ffffff;
-}
-
-.sf-menu li.dropdown a,
-.sf-menu li.mega a {
-  padding: 7px 20px;
-}
-
-.sf-menu li.dropdown ul a,
-.sf-menu li.mega .sf-mega a {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.sf-menu li.dropdown > a {
-  border-bottom: 0;
-}
-
-.sf-menu li.dropdown li > a:hover:before {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 140px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
-  content: " ";
-}
-
-.sf-menu li:last-child > a {
-  border-bottom: none;
-}
-
-.sf-menu > li > a,
-.sf-menu > li.dropdown > a,
-.sf-menu > li.mega > a {
-  padding: 36px 0;
-  color: #2c405b;
-  line-height: 1;
-  text-transform: uppercase;
-  font-size: 16px;
-  border-bottom: 1px solid #fff;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-}
-
-.sf-menu > li > a,
-.sf-menu > li.dropdown > a,
-.sf-menu > li.mega > a {
-  margin-right: 15px;
-}
-
-@media (min-width: 1200px) {
+  
+  .sf-menu > li > a {
+    position: relative;
+    display: block;
+  }
+  
+  .sf-menu .sf-mega,
+  .sf-menu li.dropdown ul {
+    position: absolute;
+    z-index: 1025;
+    /* 1 */
+    top: 100%;
+    left: 0;
+    display: none;
+  }
+  
+  .sf-menu li.dropdown {
+    position: relative;
+  }
+  
+  .sf-menu li.dropdown ul ul {
+    top: 0;
+    left: 100%;
+  }
+  
+  .sf-menu li:hover > .sf-mega,
+  .sf-menu li.sfHover > .sf-mega,
+  .sf-menu li.dropdown:hover > ul,
+  .sf-menu li.dropdown.sfHover > ul {
+    display: block;
+  }
+  
+  /* =Menu Skin
+     ========================================================================== */
+  .sf-menu a {
+    display: block;
+    color: #ffffff;
+    position: relative;
+  }
+  
+  .sf-menu a:hover {
+    color: #ffffff;
+  }
+  
+  .sf-menu li.dropdown a,
+  .sf-menu li.mega a {
+    padding: 7px 20px;
+  }
+  
+  .sf-menu li.dropdown ul a,
+  .sf-menu li.mega .sf-mega a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+  
+  .sf-menu li.dropdown > a {
+    border-bottom: 0;
+  }
+  
+  .sf-menu li.dropdown li > a:hover:before {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 140px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+    content: " ";
+  }
+  
+  .sf-menu li:last-child > a {
+    border-bottom: none;
+  }
+  
   .sf-menu > li > a,
   .sf-menu > li.dropdown > a,
   .sf-menu > li.mega > a {
-    margin-right: 30px;
+    padding: 36px 0;
+    color: #2c405b;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-bottom: 1px solid #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
   }
-}
-
-@media (min-width: 1600px) {
+  
   .sf-menu > li > a,
   .sf-menu > li.dropdown > a,
   .sf-menu > li.mega > a {
-    margin-right: 45px;
+    margin-right: 15px;
   }
-}
-
-.sf-menu > li.current > a {
-  border-bottom-color: #e75748;
-}
-
-.sf-menu > li.sfHover > a:focus,
-.sf-menu > li > a:focus,
-.sf-menu > li.sfHover > a:hover,
-.sf-menu > li > a:hover {
-  color: #e75748;
-}
-
-/* =DropDown
-   ========================================================================== */
-/**
- 	 * 1. allow long menu items to determine submenu width
- 	 */
-.sf-menu li.dropdown ul {
-  min-width: 240px;
-  /* 1 */
-  background-color: #e75748;
-  left: -15px;
-}
+  
+  @media (min-width: 1200px) {
+    .sf-menu > li > a,
+    .sf-menu > li.dropdown > a,
+    .sf-menu > li.mega > a {
+      margin-right: 30px;
+    }
+  }
+  
+  @media (min-width: 1600px) {
+    .sf-menu > li > a,
+    .sf-menu > li.dropdown > a,
+    .sf-menu > li.mega > a {
+      margin-right: 45px;
+    }
+  }
+  
+  .sf-menu > li.current > a {
+    border-bottom-color: #e75748;
+  }
+  
+  .sf-menu > li.sfHover > a:focus,
+  .sf-menu > li > a:focus,
+  .sf-menu > li.sfHover > a:hover,
+  .sf-menu > li > a:hover {
+    color: #e75748;
+  }
+  
+  /* =DropDown
+     ========================================================================== */
+  /**
+      * 1. allow long menu items to determine submenu width
+      */
+  .sf-menu li.dropdown ul {
+    min-width: 240px;
+    /* 1 */
+    background-color: #e75748;
+    left: -15px;
+  }
+  
 
 /* =Mega Menu Section
    ========================================================================== */
